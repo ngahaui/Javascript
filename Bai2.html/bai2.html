@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>bai1</title>
+</head>
+<body>
+
+	<!-- tạo đối tượng trong javascript -->
+	<script type="text/javascript">
+		//tạo đối tượng trong js
+		var enter="<br>"
+		this.myFunction= function(){
+			this.data="hello wold";
+			//private
+			var private1= "the data";
+			//tạo biến hàm
+			this.getPrivate1= getPrivate1;
+			//xay dung ham
+			function getPrivate1(){
+				return private1;
+			}
+			this.setPrivate= setPrivate;
+			function setPrivate(val){
+				private1=val;
+			}
+			
+		}
+		this.myFunction2= function(){
+			myFunction.call(this);
+		}
+
+		var obj=new myFunction2();
+		obj.setPrivate("22");
+		document.write("private data: " +obj.getPrivate1()+enter);
+		document.write("private data2: " +obj.setPrivate());
+	</script>
+</body>
+</html>

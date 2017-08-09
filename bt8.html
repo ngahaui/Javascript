@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<h2>lay gia tri o ckeck box</h2>
+	<input type="checkbox" name="hobby" value="di choi"><label for="">di choi</label>
+	<input type="checkbox" name="hobby" value="di hat"><label for="">di HAT</label>
+	<button type="button" name="" id="btn">click me!</button>
+	<script type="text/javascript">
+		document.getElementById('btn').onclick=function(){
+			var checkbox=document.getElementsByName('hobby');
+			var result="";
+			for (var i=0;i< checkbox.length;i++) {
+				if(checkbox[i].checked===true){
+					result+=' [' + checkbox[i].value + ']';
+				}
+			}
+			alert("Sở thích là: " + result);
+		}
+	</script>
+</body>
+</html>

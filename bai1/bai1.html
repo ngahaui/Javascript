@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>bai1</title>
+</head>
+<body>
+	<!-- tạo đối tượng trong javascript -->
+	<script type="text/javascript">
+		var enter="<br>"
+		/*//cách 1
+		function myFunction1(){
+
+		}
+		var obj1= new myFunction1();
+		//cách 2
+		var obj2={
+
+		}*/
+		//cách 3
+		this.myFunction3= function () {
+			this.data="nga ham";
+			this.getdata=  function (){
+
+			}
+			//tạo phương thức
+			this.getdata2= getdata2;
+			// xây dựng phương thức
+			function getdata2(){
+				return this.data;
+			}
+		}
+		var obj3= new myFunction3();
+		/*document.write("typeOf: " + typeof obj1+enter);
+		document.write("typeOf: " + typeof obj2+enter);*/
+		document.write("typeOf: " + typeof obj3+enter);
+		document.write("typeOf: " + obj3.data +enter);
+		document.write("typeOf: " + obj3.getdata2() +enter);
+	</script>
+	<script type="text/javascript">
+		//tạo đối tượng trong js
+		this.myFunction= function(){
+			this.data="hello wold"
+			
+		};
+		var obj=new myFunction();
+
+	</script>
+</body>
+</html>

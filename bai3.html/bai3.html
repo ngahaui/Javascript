@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>bai3</title>
+</head>
+<body>
+	
+	<script type="text/javascript">
+		this.myBox=function(){
+			this.arr="";
+			this.txt="";
+			this.creatBox=creatBox;
+			function creatBox(arr,text){
+				var result;
+				var style="text-align: center;";
+				style+="width:"+arr[0];
+				style+=";height:"+arr[1];
+				style+=";color:"+arr[2];
+				style+=";background:"+arr[3];
+				style+=";line-height:"+arr[1];
+
+				result ="<div style='"+style+"'>"+text+"</div>";
+
+				return result;
+			}
+			debugger;
+		}
+		var Box= new myBox();
+		document.write(Box.creatBox(["100px","100px","red","yellow"],"hello"));
+	</script>
+</body>
+</html>

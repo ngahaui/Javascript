@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>bai5</title>
+</head>
+<body>
+	<h2>thay doi noi dung</h2>
+	<div id="content">
+		thay doi noi dung nhe hehe
+	</div>
+	<button type="button" id="btn1">
+		click1
+	</button>
+	<button type="button" id="btn2">
+		click2
+	</button>
+	<script type="text/javascript">
+		var content=document.getElementById('content');
+		var click1=document.getElementById('btn1');
+		var click2=document.getElementById('btn2');
+		click1.onclick=function () {
+			content.innerHTML="hello nga";
+		}
+		click2.onclick=function(){
+			content.style.color="red";
+		}
+	</script>
+</body>
+</html>
